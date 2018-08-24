@@ -231,8 +231,8 @@ void loop()
     display(tempo);
     verificaPorta();    
   
-    if(!turnOn)
-      incDec();
+    /*if(!turnOn)
+      incDec();*/
      
     if(!portaAberta){
     
@@ -255,7 +255,8 @@ void loop()
    {
       digitalWrite(ledPower, LOW);
    }
-     
+    
+  
     
     
   
