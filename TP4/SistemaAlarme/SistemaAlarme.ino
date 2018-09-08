@@ -9,7 +9,7 @@
 
 //Entradas
 #define botao     16
-#define sensor      0
+#define sensor    12
 
 
 //Saidas
@@ -22,6 +22,11 @@ boolean power = LOW; //ler o estado do botão power
 boolean turnOn = false; //guardar o estado do botão power
 boolean atualPower = LOW;
 
+//Variáveis para guardar estado do sensor
+boolean sensorLigado = HIGH;
+boolean ativa = false;
+boolean atualSensor = HIGH;
+
 Ubidots client(TOKEN);
 
 void setup(){
@@ -32,6 +37,7 @@ void setup(){
     client.wifiConnection(WIFISSID, PASSWORD);
 
     digitalWrite(led, LOW);
+    digitalWrite(buzzer, LOW);
    
 
 }
@@ -50,32 +56,56 @@ boolean debounce(boolean last, int switchPin)
 }
 
 
+
+void leituraBotao(){
+    
+    atualPower = debounce(power, botao);
+    if(power == LOW && atualPower == HIGH)
+      turnOn =  !turnOn; //Flag global do estado do botao
+    power = atualPower;
+
+}
+
+void leituraSensor(){
+    
+    atualSensor = debounce(sensorLigado, sensor);
+    if(sensorLigado == HIGH && atualSensor == LOW){
+      digitalWrite(buzzer, HIGH);
+      ativa = ! ativa;
+    }
+      
+    sensorLigado = atualSensor;
+
+
+}
+
+
 void loop(){
 
-    //Verifica o botão e liga o sistema
-    atualPower = debounce(power, botao);  
-    if(power == LOW && atualPower == HIGH)
-    {
-        turnOn = !turnOn; 
-    }
-    power = atualPower;
-    digitalWrite(led, turnOn);
 
+
+
+    //Verifica o botão e liga o sistema
+    
+
+    leituraBotao();   
+    digitalWrite(led, turnOn);
+    
+   
     //Ações para quando o sistema estiver ligado
     if(turnOn){
-      int sensorLigado = digitalRead(sensor);
-      client.add(id_sensor, sensorLigado);
-      client.sendAll();
-      
+      leituraSensor();      
       
     }
-    /*float value1 = analogRead(A0);
-    client.add("temperature", value1);
+    else
+      digitalWrite(buzzer, LOW);
+
+
+    client.add(id_sensor, ativa);
     client.sendAll();
     
     
-    digitalWrite(buzzer, HIGH);
-    digitalWrite(led, HIGH);*/
-    
+        
+      
 
 }
