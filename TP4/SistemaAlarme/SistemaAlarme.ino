@@ -30,6 +30,7 @@ boolean atualSensor = HIGH;
 Ubidots client(TOKEN);
 
 void setup(){
+    Serial.begin(115200);
     pinMode(botao, INPUT);
     pinMode(sensor, INPUT);
     pinMode(buzzer, OUTPUT);
@@ -75,22 +76,14 @@ void leituraSensor(){
     }
       
     sensorLigado = atualSensor;
-
-
+    
 }
 
 
 void loop(){
-
-
-
-
     //Verifica o botão e liga o sistema
-    
-
     leituraBotao();   
     digitalWrite(led, turnOn);
-    
    
     //Ações para quando o sistema estiver ligado
     if(turnOn){
@@ -100,12 +93,8 @@ void loop(){
     else
       digitalWrite(buzzer, LOW);
 
-
     client.add(id_sensor, ativa);
     client.sendAll();
-    
-    
-        
-      
+     
 
 }
