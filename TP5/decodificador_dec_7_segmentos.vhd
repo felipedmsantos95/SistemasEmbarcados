@@ -7,7 +7,7 @@ entity decodificador_dec_7_seg is
 	port (
 		display_dec: in natural;
 		display1: out std_logic_vector (6 downto 0);
-		display2: out std_logic_vector (6 downto 0);
+		display2: out std_logic_vector (6 downto 0)
 	);
 end decodificador_dec_7_seg;
 

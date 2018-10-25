@@ -1,0 +1,89 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clk_placa'
+Slack : -4.265
+TNS   : -76.526
+
+Type  : Slow 1100mV 85C Model Setup 'divisor_clock:divisor_clock_aula|clock_1'
+Slack : -3.986
+TNS   : -112.296
+
+Type  : Slow 1100mV 85C Model Hold 'clk_placa'
+Slack : -0.212
+TNS   : -0.212
+
+Type  : Slow 1100mV 85C Model Hold 'divisor_clock:divisor_clock_aula|clock_1'
+Slack : 0.494
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_placa'
+Slack : -0.538
+TNS   : -24.723
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'divisor_clock:divisor_clock_aula|clock_1'
+Slack : -0.538
+TNS   : -24.107
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'start'
+Slack : -0.538
+TNS   : -0.957
+
+Type  : Slow 1100mV 0C Model Setup 'clk_placa'
+Slack : -4.503
+TNS   : -77.262
+
+Type  : Slow 1100mV 0C Model Setup 'divisor_clock:divisor_clock_aula|clock_1'
+Slack : -3.846
+TNS   : -109.358
+
+Type  : Slow 1100mV 0C Model Hold 'clk_placa'
+Slack : -0.156
+TNS   : -0.156
+
+Type  : Slow 1100mV 0C Model Hold 'divisor_clock:divisor_clock_aula|clock_1'
+Slack : 0.426
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'divisor_clock:divisor_clock_aula|clock_1'
+Slack : -0.538
+TNS   : -25.751
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_placa'
+Slack : -0.538
+TNS   : -24.832
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'start'
+Slack : -0.538
+TNS   : -1.000
+
+Type  : Fast 1100mV 0C Model Setup 'clk_placa'
+Slack : -2.098
+TNS   : -16.393
+
+Type  : Fast 1100mV 0C Model Setup 'divisor_clock:divisor_clock_aula|clock_1'
+Slack : -1.969
+TNS   : -55.383
+
+Type  : Fast 1100mV 0C Model Hold 'clk_placa'
+Slack : -0.092
+TNS   : -0.092
+
+Type  : Fast 1100mV 0C Model Hold 'divisor_clock:divisor_clock_aula|clock_1'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'start'
+Slack : -0.435
+TNS   : -0.544
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_placa'
+Slack : -0.307
+TNS   : -3.523
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'divisor_clock:divisor_clock_aula|clock_1'
+Slack : -0.007
+TNS   : -0.068
+
+------------------------------------------------------------

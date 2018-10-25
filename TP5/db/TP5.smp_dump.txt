@@ -1,0 +1,6 @@
+
+State Machine - |TP5|maquina:maquina_aula|state
+Name state.contagem~reg0 state.parado~reg0 state.inicial~reg0 
+state.inicial~reg0 0 0 0 
+state.parado~reg0 0 1 1 
+state.contagem~reg0 1 0 1 
