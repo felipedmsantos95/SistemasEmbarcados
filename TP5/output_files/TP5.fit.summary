@@ -1,13 +1,13 @@
-Fitter Status : Successful - Thu Oct 25 09:44:48 2018
+Fitter Status : Successful - Mon Oct 29 14:10:07 2018
 Quartus II 64-Bit Version : 12.1 Build 177 11/07/2012 SJ Web Edition
 Revision Name : TP5
 Top-level Entity Name : TP5
 Family : Cyclone V
 Device : 5CGXFC7C6F23C7
 Timing Models : Preliminary
-Logic utilization (in ALMs) : 249 / 56,480 ( < 1 % )
-Total registers : 64
-Total pins : 18 / 268 ( 7 % )
+Logic utilization (in ALMs) : 266 / 56,480 ( < 1 % )
+Total registers : 69
+Total pins : 22 / 268 ( 8 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 7,024,640 ( 0 % )
 Total DSP Blocks : 0 / 156 ( 0 % )

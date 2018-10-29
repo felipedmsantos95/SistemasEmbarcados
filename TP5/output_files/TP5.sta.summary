@@ -2,88 +2,220 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'clk_placa'
-Slack : -4.265
-TNS   : -76.526
+Type  : Slow 1100mV 85C Model Setup 'rst'
+Slack : -6.439
+TNS   : -49.540
 
 Type  : Slow 1100mV 85C Model Setup 'divisor_clock:divisor_clock_aula|clock_1'
-Slack : -3.986
-TNS   : -112.296
+Slack : -4.956
+TNS   : -144.836
+
+Type  : Slow 1100mV 85C Model Setup 'clk_placa'
+Slack : -4.080
+TNS   : -84.643
+
+Type  : Slow 1100mV 85C Model Setup 'start'
+Slack : -0.235
+TNS   : -0.512
+
+Type  : Slow 1100mV 85C Model Hold 'rst'
+Slack : -4.891
+TNS   : -22.307
+
+Type  : Slow 1100mV 85C Model Hold 'start'
+Slack : -0.959
+TNS   : -2.894
 
 Type  : Slow 1100mV 85C Model Hold 'clk_placa'
-Slack : -0.212
-TNS   : -0.212
+Slack : -0.665
+TNS   : -0.665
 
 Type  : Slow 1100mV 85C Model Hold 'divisor_clock:divisor_clock_aula|clock_1'
-Slack : 0.494
+Slack : 0.986
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_placa'
-Slack : -0.538
-TNS   : -24.723
+Type  : Slow 1100mV 85C Model Recovery 'divisor_clock:divisor_clock_aula|clock_1'
+Slack : -9.053
+TNS   : -272.263
+
+Type  : Slow 1100mV 85C Model Recovery 'start'
+Slack : -2.086
+TNS   : -10.834
+
+Type  : Slow 1100mV 85C Model Recovery 'rst'
+Slack : -0.609
+TNS   : -2.226
+
+Type  : Slow 1100mV 85C Model Removal 'rst'
+Slack : -1.654
+TNS   : -6.143
+
+Type  : Slow 1100mV 85C Model Removal 'start'
+Slack : -0.345
+TNS   : -1.713
+
+Type  : Slow 1100mV 85C Model Removal 'divisor_clock:divisor_clock_aula|clock_1'
+Slack : 2.082
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'rst'
+Slack : -4.758
+TNS   : -355.384
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'divisor_clock:divisor_clock_aula|clock_1'
 Slack : -0.538
-TNS   : -24.107
+TNS   : -26.461
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_placa'
+Slack : -0.538
+TNS   : -24.617
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'start'
 Slack : -0.538
-TNS   : -0.957
+TNS   : -4.674
 
-Type  : Slow 1100mV 0C Model Setup 'clk_placa'
-Slack : -4.503
-TNS   : -77.262
+Type  : Slow 1100mV 0C Model Setup 'rst'
+Slack : -6.400
+TNS   : -49.007
 
 Type  : Slow 1100mV 0C Model Setup 'divisor_clock:divisor_clock_aula|clock_1'
-Slack : -3.846
-TNS   : -109.358
+Slack : -4.755
+TNS   : -136.743
+
+Type  : Slow 1100mV 0C Model Setup 'clk_placa'
+Slack : -4.276
+TNS   : -83.128
+
+Type  : Slow 1100mV 0C Model Setup 'start'
+Slack : -0.234
+TNS   : -0.497
+
+Type  : Slow 1100mV 0C Model Hold 'rst'
+Slack : -4.793
+TNS   : -21.709
+
+Type  : Slow 1100mV 0C Model Hold 'start'
+Slack : -0.893
+TNS   : -2.499
 
 Type  : Slow 1100mV 0C Model Hold 'clk_placa'
-Slack : -0.156
-TNS   : -0.156
+Slack : -0.483
+TNS   : -0.483
 
 Type  : Slow 1100mV 0C Model Hold 'divisor_clock:divisor_clock_aula|clock_1'
-Slack : 0.426
+Slack : 0.896
 TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'divisor_clock:divisor_clock_aula|clock_1'
+Slack : -8.810
+TNS   : -265.449
+
+Type  : Slow 1100mV 0C Model Recovery 'start'
+Slack : -1.911
+TNS   : -10.025
+
+Type  : Slow 1100mV 0C Model Recovery 'rst'
+Slack : -0.523
+TNS   : -1.948
+
+Type  : Slow 1100mV 0C Model Removal 'rst'
+Slack : -1.591
+TNS   : -5.951
+
+Type  : Slow 1100mV 0C Model Removal 'start'
+Slack : -0.329
+TNS   : -1.630
+
+Type  : Slow 1100mV 0C Model Removal 'divisor_clock:divisor_clock_aula|clock_1'
+Slack : 1.967
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'rst'
+Slack : -4.585
+TNS   : -351.057
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'divisor_clock:divisor_clock_aula|clock_1'
 Slack : -0.538
-TNS   : -25.751
+TNS   : -24.868
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_placa'
 Slack : -0.538
-TNS   : -24.832
+TNS   : -24.731
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'start'
 Slack : -0.538
-TNS   : -1.000
+TNS   : -4.665
 
-Type  : Fast 1100mV 0C Model Setup 'clk_placa'
-Slack : -2.098
-TNS   : -16.393
+Type  : Fast 1100mV 0C Model Setup 'rst'
+Slack : -3.440
+TNS   : -23.485
 
 Type  : Fast 1100mV 0C Model Setup 'divisor_clock:divisor_clock_aula|clock_1'
-Slack : -1.969
-TNS   : -55.383
+Slack : -2.778
+TNS   : -81.536
 
-Type  : Fast 1100mV 0C Model Hold 'clk_placa'
-Slack : -0.092
-TNS   : -0.092
+Type  : Fast 1100mV 0C Model Setup 'clk_placa'
+Slack : -1.999
+TNS   : -18.913
 
-Type  : Fast 1100mV 0C Model Hold 'divisor_clock:divisor_clock_aula|clock_1'
-Slack : 0.178
+Type  : Fast 1100mV 0C Model Setup 'start'
+Slack : 0.975
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'start'
-Slack : -0.435
-TNS   : -0.544
+Type  : Fast 1100mV 0C Model Hold 'rst'
+Slack : -2.006
+TNS   : -9.161
+
+Type  : Fast 1100mV 0C Model Hold 'start'
+Slack : -0.809
+TNS   : -2.895
+
+Type  : Fast 1100mV 0C Model Hold 'clk_placa'
+Slack : -0.163
+TNS   : -0.163
+
+Type  : Fast 1100mV 0C Model Hold 'divisor_clock:divisor_clock_aula|clock_1'
+Slack : 0.379
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'divisor_clock:divisor_clock_aula|clock_1'
+Slack : -4.569
+TNS   : -136.881
+
+Type  : Fast 1100mV 0C Model Recovery 'start'
+Slack : -0.301
+TNS   : -0.888
+
+Type  : Fast 1100mV 0C Model Recovery 'rst'
+Slack : 0.471
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'rst'
+Slack : -0.648
+TNS   : -2.470
+
+Type  : Fast 1100mV 0C Model Removal 'start'
+Slack : -0.566
+TNS   : -3.255
+
+Type  : Fast 1100mV 0C Model Removal 'divisor_clock:divisor_clock_aula|clock_1'
+Slack : 0.771
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'rst'
+Slack : -2.071
+TNS   : -114.172
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_placa'
-Slack : -0.307
-TNS   : -3.523
+Slack : -0.320
+TNS   : -3.691
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'start'
+Slack : -0.088
+TNS   : -0.520
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'divisor_clock:divisor_clock_aula|clock_1'
-Slack : -0.007
-TNS   : -0.068
+Slack : 0.066
+TNS   : 0.000
 
 ------------------------------------------------------------

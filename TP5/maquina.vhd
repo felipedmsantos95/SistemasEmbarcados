@@ -18,8 +18,10 @@ entity maquina is
 end maquina;
 
 architecture maquina_arq of maquina is
+
 signal aux: natural :=0;
-begin
+
+begin	
 	process(start, reset, clk) is
 		begin
 			if reset = '0' then
@@ -34,95 +36,57 @@ begin
 				if (start'event and start = '0') then
 					state <= espera;
 				end if;
+				aux <= 0;
 			elsif state = espera then
-				if (clk'event and clk = '1') then
-					if aux < 3 then
-						aux <= aux + 1;
-					elsif aux = 3 then
-						aux <= 0;
-						state <= piscaVerdeVec;					
-					end if;
-				end if;					
+				state <= piscaVerdeVec;								
 			elsif state = piscaVerdeVec then
-				if (clk'event and clk = '1') then
-					sinalVerdeV <= not sinalVerdeV;
-					sinalVerdeV <= not sinalVerdeV;
-					sinalVerdeV <= not sinalVerdeV;
-					if aux < 3 then
-						aux <= aux + 1;
-					elsif aux = 3 then
-						aux <= 0;
-						state <= luzAmarelaVec;					
-					end if;
-				end if;
+				sinalVerdeV <= not sinalVerdeV;
+				sinalVerdeV <= not sinalVerdeV;
+				sinalVerdeV <= not sinalVerdeV;
+				state <= luzAmarelaVec;
+				aux <= 0;
 			elsif state = luzAmarelaVec then
 				sinalVermelhoV <= '1'; 
 				sinalAmareloV  <= '0';
 				sinalVerdeV    <= '1';
 				sinalVermelhoP <= '0';
 				sinalVerdeP    <= '1';
-				if (clk'event and clk = '1') then
-					if aux < 3 then
-						aux <= aux + 1;
-					elsif aux = 3 then
-						aux <= 0;
-						state <= luzVermelhaVec;					
-					end if;
-				end if;
+				state <= luzVermelhaVec;
+				aux <= 0;
 			elsif state = luzVermelhaVec then
 				sinalVermelhoV <= '0'; 
 				sinalAmareloV  <= '1';
 				sinalVerdeV    <= '1';
 				sinalVermelhoP <= '0';
 				sinalVerdeP    <= '1';
-				if (clk'event and clk = '1') then
-					if aux < 3 then
-						aux <= aux + 1;
-					elsif aux = 3 then
-						aux <= 0;
-						state <= atravessa;					
-					end if;
-				end if;
+				state <= atravessa;
+				aux <= 0;
 			elsif state = atravessa then
 				sinalVermelhoV <= '0'; 
 				sinalAmareloV  <= '1';
 				sinalVerdeV    <= '1';
 				sinalVermelhoP <= '1';
 				sinalVerdeP    <= '0';
-				if (clk'event and clk = '1') then
-					if aux < 3 then
-						aux <= aux + 1;
-					elsif aux = 3 then
-						aux <= 0;
-						state <= piscaVerdePed;					
-					end if;
-				end if;
+				state <= piscaVerdePed;
+				aux <= 0;
 			elsif state = piscaVerdeVec then
-				if (clk'event and clk = '1') then
-					sinalVerdeP <= not sinalVerdeP;
-					sinalVerdeP <= not sinalVerdeP;
-					sinalVerdeP <= not sinalVerdeP;
-					if aux < 3 then
-						aux <= aux + 1;
-					elsif aux = 3 then
-						aux <= 0;
-						state <= luzVermelhaPed;					
-					end if;
-				end if;
+				sinalVerdeP <= not sinalVerdeP;
+				sinalVerdeP <= not sinalVerdeP;
+				sinalVerdeP <= not sinalVerdeP;
+				state <= luzVermelhaPed;
+				aux <= 0;
 			elsif state = luzVermelhaPed then
 				sinalVermelhoV <= '0'; 
 				sinalAmareloV  <= '1';
 				sinalVerdeV    <= '1';
 				sinalVermelhoP <= '0';
 				sinalVerdeP    <= '1';
-				if (clk'event and clk = '1') then
+				state <= inicial;
+				aux <= 0;
+			elsif (clk'event and clk = '1') then
 					if aux < 3 then
 						aux <= aux + 1;
-					elsif aux = 3 then
-						aux <= 0;
-						state <= inicial;					
 					end if;
-				end if;
 			end if;
 	end process;
 	cont <= aux;

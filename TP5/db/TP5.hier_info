@@ -1,6 +1,5 @@
 |TP5
 start => maquina:maquina_aula.start
-stop => maquina:maquina_aula.stop
 rst => maquina:maquina_aula.reset
 clk_placa => divisor_clock:divisor_clock_aula.clock50
 displaya[0] <= decodificador_dec_7_seg:decoder_display_aula.display1[0]
@@ -17,6 +16,11 @@ displayb[3] <= decodificador_dec_7_seg:decoder_display_aula.display2[3]
 displayb[4] <= decodificador_dec_7_seg:decoder_display_aula.display2[4]
 displayb[5] <= decodificador_dec_7_seg:decoder_display_aula.display2[5]
 displayb[6] <= decodificador_dec_7_seg:decoder_display_aula.display2[6]
+sinalVermelhoV_p <= maquina:maquina_aula.sinalVermelhoV
+sinalAmareloV_p <= maquina:maquina_aula.sinalAmareloV
+sinalVerdeV_p <= maquina:maquina_aula.sinalVerdeV
+sinalVermelhoP_p <= maquina:maquina_aula.sinalVermelhoP
+sinalVerdeP_p <= maquina:maquina_aula.sinalVerdeP
 
 
 |TP5|divisor_clock:divisor_clock_aula
@@ -56,40 +60,26 @@ clock_1 <= clock_1~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TP5|maquina:maquina_aula
-start => state~1.DATAIN
-stop => ~NO_FANOUT~
-reset => aux[0].ACLR
-reset => aux[1].ACLR
-reset => aux[2].ACLR
-reset => aux[3].ACLR
-reset => aux[4].ACLR
-reset => aux[5].ACLR
-reset => aux[6].ACLR
-reset => aux[7].ACLR
-reset => aux[8].ACLR
-reset => aux[9].ACLR
-reset => aux[10].ACLR
-reset => aux[11].ACLR
-reset => aux[12].ACLR
-reset => aux[13].ACLR
-reset => aux[14].ACLR
-reset => aux[15].ACLR
-reset => aux[16].ACLR
-reset => aux[17].ACLR
-reset => aux[18].ACLR
-reset => aux[19].ACLR
-reset => aux[20].ACLR
-reset => aux[21].ACLR
-reset => aux[22].ACLR
-reset => aux[23].ACLR
-reset => aux[24].ACLR
-reset => aux[25].ACLR
-reset => aux[26].ACLR
-reset => aux[27].ACLR
-reset => aux[28].ACLR
-reset => aux[29].ACLR
-reset => aux[30].ACLR
-reset => state~3.DATAIN
+start => state.luzVermelhaPed~reg0.CLK
+start => state.PiscaVerdePed~reg0.CLK
+start => state.atravessa~reg0.CLK
+start => state.luzVermelhaVec~reg0.CLK
+start => state.luzAmarelaVec~reg0.CLK
+start => state.piscaVerdeVec~reg0.CLK
+start => state.espera~reg0.CLK
+start => state.inicial~reg0.CLK
+reset => sinalVerdeV.IN1
+reset => sinalVermelhoV.IN1
+reset => state.inicial.IN1
+reset => aux[30].IN1
+reset => state.luzVermelhaPed~reg0.ACLR
+reset => state.PiscaVerdePed~reg0.ACLR
+reset => state.atravessa~reg0.ACLR
+reset => state.luzVermelhaVec~reg0.ACLR
+reset => state.luzAmarelaVec~reg0.ACLR
+reset => state.piscaVerdeVec~reg0.ACLR
+reset => state.espera~reg0.ACLR
+reset => state.inicial~reg0.PRESET
 clk => aux[0].CLK
 clk => aux[1].CLK
 clk => aux[2].CLK
@@ -122,8 +112,13 @@ clk => aux[28].CLK
 clk => aux[29].CLK
 clk => aux[30].CLK
 state.inicial <> state.inicial
-state.parado <> state.parado
-state.contagem <> state.contagem
+state.espera <> state.espera
+state.piscaVerdeVec <> state.piscaVerdeVec
+state.luzAmarelaVec <> state.luzAmarelaVec
+state.luzVermelhaVec <> state.luzVermelhaVec
+state.atravessa <> state.atravessa
+state.PiscaVerdePed <> state.PiscaVerdePed
+state.luzVermelhaPed <> state.luzVermelhaPed
 cont[0] <= aux[0].DB_MAX_OUTPUT_PORT_TYPE
 cont[1] <= aux[1].DB_MAX_OUTPUT_PORT_TYPE
 cont[2] <= aux[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -155,6 +150,11 @@ cont[27] <= aux[27].DB_MAX_OUTPUT_PORT_TYPE
 cont[28] <= aux[28].DB_MAX_OUTPUT_PORT_TYPE
 cont[29] <= aux[29].DB_MAX_OUTPUT_PORT_TYPE
 cont[30] <= aux[30].DB_MAX_OUTPUT_PORT_TYPE
+sinalVermelhoV <= sinalVermelhoV$latch.DB_MAX_OUTPUT_PORT_TYPE
+sinalAmareloV <= sinalAmareloV$latch.DB_MAX_OUTPUT_PORT_TYPE
+sinalVerdeV <= sinalVerdeV$latch.DB_MAX_OUTPUT_PORT_TYPE
+sinalVermelhoP <= sinalVermelhoP$latch.DB_MAX_OUTPUT_PORT_TYPE
+sinalVerdeP <= sinalVerdeP$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TP5|decodificador_dec_7_seg:decoder_display_aula

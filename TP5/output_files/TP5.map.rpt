@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TP5
-Thu Oct 25 16:38:19 2018
+Mon Oct 29 14:27:13 2018
 Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
@@ -10,7 +10,18 @@ Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for Inferred Entity Instance: decodificador_dec_7_seg:decoder_display_aula|lpm_divide:Div0
+ 14. Port Connectivity Checks: "maquina:maquina_aula"
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -33,22 +44,27 @@ applicable agreement for further details.
 
 
 
-+------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                           ;
-+-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Thu Oct 25 16:38:19 2018        ;
-; Quartus II 64-Bit Version   ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
-; Revision Name               ; TP5                                      ;
-; Top-level Entity Name       ; TP5                                      ;
-; Family                      ; Cyclone V                                ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                ;
-; Total registers             ; N/A until Partition Merge                ;
-; Total pins                  ; N/A until Partition Merge                ;
-; Total virtual pins          ; N/A until Partition Merge                ;
-; Total block memory bits     ; N/A until Partition Merge                ;
-; Total PLLs                  ; N/A until Partition Merge                ;
-; Total DLLs                  ; N/A until Partition Merge                ;
-+-----------------------------+------------------------------------------+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++---------------------------------+------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Oct 29 14:27:13 2018    ;
+; Quartus II 64-Bit Version       ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
+; Revision Name                   ; TP5                                      ;
+; Top-level Entity Name           ; TP5                                      ;
+; Family                          ; Cyclone V                                ;
+; Logic utilization (in ALMs)     ; N/A                                      ;
+; Total registers                 ; 69                                       ;
+; Total pins                      ; 22                                       ;
+; Total virtual pins              ; 0                                        ;
+; Total block memory bits         ; 0                                        ;
+; Total DSP Blocks                ; 0                                        ;
+; Total HSSI RX PCSs              ; 0                                        ;
+; Total HSSI PMA RX Deserializers ; 0                                        ;
+; Total HSSI TX PCSs              ; 0                                        ;
+; Total HSSI PMA TX Serializers   ; 0                                        ;
+; Total PLLs                      ; 0                                        ;
+; Total DLLs                      ; 0                                        ;
++---------------------------------+------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -148,13 +164,175 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
++-----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path  ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                   ; Library ;
++-----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
+; maquina.vhd                       ; yes             ; User VHDL File               ; C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd                       ;         ;
+; decodificador_dec_7_segmentos.vhd ; yes             ; User VHDL File               ; C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/decodificador_dec_7_segmentos.vhd ;         ;
+; divisor_clock.vhd                 ; yes             ; User VHDL File               ; C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/divisor_clock.vhd                 ;         ;
+; TP5.vhd                           ; yes             ; User VHDL File               ; C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/TP5.vhd                           ;         ;
+; myLibrary/felipe.vhd              ; yes             ; User VHDL File               ; C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/myLibrary/felipe.vhd              ;         ;
+; lpm_divide.tdf                    ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/lpm_divide.tdf                                  ;         ;
+; abs_divider.inc                   ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/abs_divider.inc                                 ;         ;
+; sign_div_unsign.inc               ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/sign_div_unsign.inc                             ;         ;
+; aglobal121.inc                    ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/aglobal121.inc                                  ;         ;
+; db/lpm_divide_hbm.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/db/lpm_divide_hbm.tdf             ;         ;
+; db/sign_div_unsign_nlh.tdf        ; yes             ; Auto-Generated Megafunction  ; C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/db/sign_div_unsign_nlh.tdf        ;         ;
+; db/alt_u_div_kve.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/db/alt_u_div_kve.tdf              ;         ;
++-----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 264   ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 493   ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 34    ;
+;     -- 5 input functions                    ; 8     ;
+;     -- 4 input functions                    ; 33    ;
+;     -- <=3 input functions                  ; 418   ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 69    ;
+;                                             ;       ;
+; I/O pins                                    ; 22    ;
+; Total DSP Blocks                            ; 0     ;
+; Maximum fan-out                             ; 32    ;
+; Total fan-out                               ; 1706  ;
+; Average fan-out                             ; 2.82  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                            ;
++---------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                               ; Library Name ;
++---------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |TP5                                              ; 493 (0)           ; 69 (0)       ; 0                 ; 0          ; 22   ; 0            ; |TP5                                                                                                                                              ;              ;
+;    |decodificador_dec_7_seg:decoder_display_aula| ; 387 (85)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |TP5|decodificador_dec_7_seg:decoder_display_aula                                                                                                 ;              ;
+;       |lpm_divide:Div0|                           ; 302 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |TP5|decodificador_dec_7_seg:decoder_display_aula|lpm_divide:Div0                                                                                 ;              ;
+;          |lpm_divide_hbm:auto_generated|          ; 302 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |TP5|decodificador_dec_7_seg:decoder_display_aula|lpm_divide:Div0|lpm_divide_hbm:auto_generated                                                   ;              ;
+;             |sign_div_unsign_nlh:divider|         ; 302 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |TP5|decodificador_dec_7_seg:decoder_display_aula|lpm_divide:Div0|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                       ;              ;
+;                |alt_u_div_kve:divider|            ; 302 (302)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |TP5|decodificador_dec_7_seg:decoder_display_aula|lpm_divide:Div0|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ;              ;
+;    |divisor_clock:divisor_clock_aula|             ; 38 (38)           ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |TP5|divisor_clock:divisor_clock_aula                                                                                                             ;              ;
+;    |maquina:maquina_aula|                         ; 68 (68)           ; 37 (37)      ; 0                 ; 0          ; 0    ; 0            ; |TP5|maquina:maquina_aula                                                                                                                         ;              ;
++---------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                               ;
++----------------------------------------------------+-------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                 ; Free of Timing Hazards ;
++----------------------------------------------------+-------------------------------------+------------------------+
+; maquina:maquina_aula|sinalVermelhoV                ; maquina:maquina_aula|sinalVermelhoV ; yes                    ;
+; maquina:maquina_aula|sinalAmareloV                 ; maquina:maquina_aula|sinalVermelhoV ; yes                    ;
+; maquina:maquina_aula|sinalVerdeV                   ; maquina:maquina_aula|sinalVerdeV    ; yes                    ;
+; maquina:maquina_aula|sinalVermelhoP                ; maquina:maquina_aula|sinalVermelhoV ; yes                    ;
+; maquina:maquina_aula|sinalVerdeP                   ; maquina:maquina_aula|sinalVermelhoV ; yes                    ;
+; Number of user-specified and inferred latches = 5  ;                                     ;                        ;
++----------------------------------------------------+-------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                      ;
++------------------------------------------------+----------------------------------------+
+; Register name                                  ; Reason for Removal                     ;
++------------------------------------------------+----------------------------------------+
+; maquina:maquina_aula|state.luzVermelhaPed~reg0 ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1          ;                                        ;
++------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 69    ;
+; Number of registers using Synchronous Clear  ; 31    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 37    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 30    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------+
+; Inverted Register Statistics                               ;
++--------------------------------------------------+---------+
+; Inverted Register                                ; Fan out ;
++--------------------------------------------------+---------+
+; maquina:maquina_aula|state.inicial~reg0_emulated ; 1       ;
+; Total number of inverted registers = 1           ;         ;
++--------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |TP5|maquina:maquina_aula|sinalVermelhoP ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |TP5|maquina:maquina_aula|state          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decodificador_dec_7_seg:decoder_display_aula|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                ;
++------------------------+----------------+---------------------------------------------------------------------+
+; LPM_WIDTHN             ; 31             ; Untyped                                                             ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                             ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                             ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                             ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                             ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                             ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                             ;
+; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                                                             ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                             ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                             ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                        ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                      ;
++------------------------+----------------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "maquina:maquina_aula"                                                               ;
++-------+-------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                             ;
++-------+-------+----------+-------------------------------------------------------------------------------------+
+; state ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:06     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
-    Info: Processing started: Thu Oct 25 16:38:18 2018
+    Info: Processing started: Mon Oct 29 14:27:04 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TP5 -c TP5
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file maquina.vhd
@@ -174,64 +352,81 @@ Info (12021): Found 1 design units, including 0 entities, in source file mylibra
 Info (12127): Elaborating entity "TP5" for the top level hierarchy
 Info (12128): Elaborating entity "divisor_clock" for hierarchy "divisor_clock:divisor_clock_aula"
 Info (12128): Elaborating entity "maquina" for hierarchy "maquina:maquina_aula"
-Warning (10492): VHDL Process Statement warning at maquina.vhd(28): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at maquina.vhd(37): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at maquina.vhd(46): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at maquina.vhd(58): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at maquina.vhd(30): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at maquina.vhd(40): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at maquina.vhd(42): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at maquina.vhd(43): signal "sinalVerdeV" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at maquina.vhd(44): signal "sinalVerdeV" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at maquina.vhd(45): signal "sinalVerdeV" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at maquina.vhd(48): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at maquina.vhd(56): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at maquina.vhd(64): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at maquina.vhd(72): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at maquina.vhd(86): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at maquina.vhd(100): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at maquina.vhd(112): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at maquina.vhd(23): inferring latch(es) for signal or variable "sinalVermelhoV", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at maquina.vhd(23): inferring latch(es) for signal or variable "sinalAmareloV", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at maquina.vhd(23): inferring latch(es) for signal or variable "sinalVermelhoP", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "sinalVerdeP" at maquina.vhd(23)
-Info (10041): Inferred latch for "sinalVermelhoP" at maquina.vhd(23)
-Info (10041): Inferred latch for "sinalAmareloV" at maquina.vhd(23)
-Info (10041): Inferred latch for "sinalVermelhoV" at maquina.vhd(23)
-Error (10821): HDL error at maquina.vhd(25): can't infer register for "aux[0]" because its behavior does not match any supported register model File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd Line: 25
-Info (10041): Inferred latch for "aux[0]" at maquina.vhd(23)
-Error (10821): HDL error at maquina.vhd(25): can't infer register for "aux[1]" because its behavior does not match any supported register model File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd Line: 25
-Info (10041): Inferred latch for "aux[1]" at maquina.vhd(23)
-Error (10821): HDL error at maquina.vhd(25): can't infer register for "aux[2]" because its behavior does not match any supported register model File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd Line: 25
-Info (10041): Inferred latch for "aux[2]" at maquina.vhd(23)
-Error (10821): HDL error at maquina.vhd(25): can't infer register for "aux[3]" because its behavior does not match any supported register model File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd Line: 25
-Info (10041): Inferred latch for "aux[3]" at maquina.vhd(23)
-Error (10821): HDL error at maquina.vhd(25): can't infer register for "aux[4]" because its behavior does not match any supported register model File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd Line: 25
-Info (10041): Inferred latch for "aux[4]" at maquina.vhd(23)
-Error (10821): HDL error at maquina.vhd(25): can't infer register for "aux[5]" because its behavior does not match any supported register model File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd Line: 25
-Info (10041): Inferred latch for "aux[5]" at maquina.vhd(23)
-Error (10821): HDL error at maquina.vhd(25): can't infer register for "aux[6]" because its behavior does not match any supported register model File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd Line: 25
-Info (10041): Inferred latch for "aux[6]" at maquina.vhd(23)
-Error (10821): HDL error at maquina.vhd(25): can't infer register for "aux[7]" because its behavior does not match any supported register model File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd Line: 25
-Info (10041): Inferred latch for "aux[7]" at maquina.vhd(23)
-Error (10821): HDL error at maquina.vhd(25): can't infer register for "aux[8]" because its behavior does not match any supported register model File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd Line: 25
-Info (10041): Inferred latch for "aux[8]" at maquina.vhd(23)
-Error (10821): HDL error at maquina.vhd(25): can't infer register for "aux[9]" because its behavior does not match any supported register model File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd Line: 25
-Info (10041): Inferred latch for "aux[9]" at maquina.vhd(23)
-Error (10821): HDL error at maquina.vhd(25): can't infer register for "aux[10]" because its behavior does not match any supported register model File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd Line: 25
-Info (10041): Inferred latch for "aux[10]" at maquina.vhd(23)
-Error (10821): HDL error at maquina.vhd(25): can't infer register for "aux[11]" because its behavior does not match any supported register model File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd Line: 25
-Info (10041): Inferred latch for "aux[11]" at maquina.vhd(23)
-Error (10821): HDL error at maquina.vhd(25): can't infer register for "aux[12]" because its behavior does not match any supported register model File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd Line: 25
-Info (10041): Inferred latch for "aux[12]" at maquina.vhd(23)
-Error (10821): HDL error at maquina.vhd(25): can't infer register for "aux[13]" because its behavior does not match any supported register model File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd Line: 25
-Info (10041): Inferred latch for "aux[13]" at maquina.vhd(23)
-Error (10821): HDL error at maquina.vhd(25): can't infer register for "aux[14]" because its behavior does not match any supported register model File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd Line: 25
-Info (10041): Inferred latch for "aux[14]" at maquina.vhd(23)
-Error (10821): HDL error at maquina.vhd(25): can't infer register for "aux[15]" because its behavior does not match any supported register model File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd Line: 25
-Info (10041): Inferred latch for "aux[15]" at maquina.vhd(23)
-Error (10821): HDL error at maquina.vhd(25): can't infer register for "aux[16]" because its behavior does not match any supported register model File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd Line: 25
-Info (10041): Inferred latch for "aux[16]" at maquina.vhd(23)
-Error (10821): HDL error at maquina.vhd(25): can't infer register for "aux[17]" because its behavior does not match any supported register model File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd Line: 25
-Info (10041): Inferred latch for "aux[17]" at maquina.vhd(23)
-Error (10821): HDL error at maquina.vhd(25): can't infer register for "aux[18]" because its behavior does not match any supported register model File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/maquina.vhd Line: 25
-Info (10041): Inferred latch for "aux[18]" at maquina.vhd(23)
-Error (12152): Can't elaborate user hierarchy "maquina:maquina_aula" File: C:/Users/Felipe Santos - ICTS/Desktop/SistemasEmbarcados/TP5/TP5.vhd Line: 62
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 20 errors, 12 warnings
-    Error: Peak virtual memory: 4686 megabytes
-    Error: Processing ended: Thu Oct 25 16:38:19 2018
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:01
+Warning (10492): VHDL Process Statement warning at maquina.vhd(73): signal "sinalVerdeP" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at maquina.vhd(74): signal "sinalVerdeP" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at maquina.vhd(75): signal "sinalVerdeP" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at maquina.vhd(78): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at maquina.vhd(25): inferring latch(es) for signal or variable "sinalVermelhoV", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at maquina.vhd(25): inferring latch(es) for signal or variable "sinalAmareloV", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at maquina.vhd(25): inferring latch(es) for signal or variable "sinalVerdeV", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at maquina.vhd(25): inferring latch(es) for signal or variable "sinalVermelhoP", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at maquina.vhd(25): inferring latch(es) for signal or variable "sinalVerdeP", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "sinalVerdeP" at maquina.vhd(25)
+Info (10041): Inferred latch for "sinalVermelhoP" at maquina.vhd(25)
+Info (10041): Inferred latch for "sinalVerdeV" at maquina.vhd(25)
+Info (10041): Inferred latch for "sinalAmareloV" at maquina.vhd(25)
+Info (10041): Inferred latch for "sinalVermelhoV" at maquina.vhd(25)
+Info (10018): Can't recognize finite state machine "state" because it has a complex reset state
+Info (12128): Elaborating entity "decodificador_dec_7_seg" for hierarchy "decodificador_dec_7_seg:decoder_display_aula"
+Warning (10492): VHDL Process Statement warning at decodificador_dec_7_segmentos.vhd(24): signal "aux1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at decodificador_dec_7_segmentos.vhd(38): signal "aux2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following LCELL buffer node(s):
+        Warning (14320): Synthesized away node "No instance name"
+        Warning (14320): Synthesized away node "No instance name"
+        Warning (14320): Synthesized away node "No instance name"
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decodificador_dec_7_seg:decoder_display_aula|Div0"
+Info (12130): Elaborated megafunction instantiation "decodificador_dec_7_seg:decoder_display_aula|lpm_divide:Div0"
+Info (12133): Instantiated megafunction "decodificador_dec_7_seg:decoder_display_aula|lpm_divide:Div0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "31"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
+    Info (12023): Found entity 1: lpm_divide_hbm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_nlh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
+    Info (12023): Found entity 1: alt_u_div_kve
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch maquina:maquina_aula|sinalVermelhoV has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal maquina:maquina_aula|state.inicial~reg0
+Warning (13012): Latch maquina:maquina_aula|sinalAmareloV has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal maquina:maquina_aula|state.inicial~reg0
+Warning (13012): Latch maquina:maquina_aula|sinalVerdeV has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal maquina:maquina_aula|state.inicial~reg0
+Warning (13012): Latch maquina:maquina_aula|sinalVermelhoP has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal maquina:maquina_aula|state.atravessa~reg0
+Warning (13012): Latch maquina:maquina_aula|sinalVerdeP has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal maquina:maquina_aula|state.atravessa~reg0
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "maquina:maquina_aula|state.inicial~reg0" is converted into an equivalent circuit using register "maquina:maquina_aula|state.inicial~reg0_emulated" and latch "maquina:maquina_aula|state.inicial~reg0latch"
+    Warning (13310): Register "maquina:maquina_aula|state.atravessa~reg0" is converted into an equivalent circuit using register "maquina:maquina_aula|state.atravessa~reg0_emulated" and latch "maquina:maquina_aula|state.atravessa~reg0latch"
+    Warning (13310): Register "maquina:maquina_aula|state.luzVermelhaVec~reg0" is converted into an equivalent circuit using register "maquina:maquina_aula|state.luzVermelhaVec~reg0_emulated" and latch "maquina:maquina_aula|state.luzVermelhaVec~reg0latch"
+    Warning (13310): Register "maquina:maquina_aula|state.luzAmarelaVec~reg0" is converted into an equivalent circuit using register "maquina:maquina_aula|state.luzAmarelaVec~reg0_emulated" and latch "maquina:maquina_aula|state.luzAmarelaVec~reg0latch"
+    Warning (13310): Register "maquina:maquina_aula|state.piscaVerdeVec~reg0" is converted into an equivalent circuit using register "maquina:maquina_aula|state.piscaVerdeVec~reg0_emulated" and latch "maquina:maquina_aula|state.piscaVerdeVec~reg0latch"
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 520 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 19 output pins
+    Info (21061): Implemented 498 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 44 warnings
+    Info: Peak virtual memory: 4707 megabytes
+    Info: Processing ended: Mon Oct 29 14:27:14 2018
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:04
 
 

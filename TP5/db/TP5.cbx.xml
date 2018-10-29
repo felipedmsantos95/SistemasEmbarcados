@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="TP5">
+		<CBX_INST_ENTRY INSTANCE_NAME="|TP5|decodificador_dec_7_seg:decoder_display_aula|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_hbm.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
