@@ -16,8 +16,8 @@ int main(){
 				
 		
 	}while(valor != 65535);
-
-	for(int i = 0; i < cont; i++)
+	int i;
+	for(i = 0; i < cont; i++)
 		printf("%hu\n", result[i]);
 	return 0;
 }

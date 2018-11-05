@@ -6,7 +6,7 @@ int main()
 	unsigned char a, b, orEx; 
 	unsigned char desloc[100];
 	int bit;
-	int cont = 0;
+	int cont = 0, tamanhoLido = 0;
 	
 	do{
 		scanf("%hhu", &a);
@@ -22,8 +22,8 @@ int main()
 			}
 		}
 	}while((b != 0xFF)&&(a != 0x00));
-	
-	for(int i = 0; i < cont; i++)
+	int i;
+	for(i = 0; i < cont; i++)
 	{
 		if((desloc[i] & 0x01) == 0x01)
 			printf("SIM\n");
