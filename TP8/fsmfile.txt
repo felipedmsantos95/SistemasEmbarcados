@@ -1,0 +1,17 @@
+fsm elevador {
+    input = {r1, r2, r3};
+    output = {u1, u2, d1, d2, nop};
+    states = {S1, S2, S3, S4,      S5};
+    initial state = {S1};
+    transitions {
+        (S1, r1, nop, S1),
+        (S1, r2, u1, S2),
+        (S1, r3, u2, S3),
+        (S2, r2, nop, S2),
+        (S2, r1, d1, S1),
+        (S2, r3, u1, S3),
+        (S3, r3, nop, S3),
+        (S3, r1, d2, S1),
+        (S3, r2, d1, S2)
+    }
+}
