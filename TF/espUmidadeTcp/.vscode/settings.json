@@ -1,0 +1,7 @@
+{
+    "terminal.integrated.env.linux": {
+        "PATH": "/home/felipedmsantos/.platformio/penv/bin:/home/felipedmsantos/.platformio/penv:/app/bin:/usr/bin:/home/felipedmsantos/.var/app/com.visualstudio.code/data/node_modules/bin",
+        "PLATFORMIO_CALLER": "vscode"
+    },
+    "platformio-ide.forceUploadAndMonitor": true
+}
