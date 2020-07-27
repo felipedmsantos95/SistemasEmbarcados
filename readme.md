@@ -2,7 +2,7 @@
 
 ## Sobre
 
-Este repositório conta com os projetos desenvolvidos por mim na disciplina Sistemas Embarcados ministrada na UFAM, cada pasta do repositório contem um PDF com a descrição da atividade proposta assim como os códigos das minhas soluções. No restante deste arquivo, é descrito o projeto final desenvolvido.
+Este repositório conta com os projetos desenvolvidos por mim na disciplina Sistemas Embarcados ministrada na UFAM, cada pasta do repositório contem um PDF com a descrição da atividade proposta assim como os códigos das minhas soluções. No restante deste arquivo, é descrito o projeto final desenvolvido que pode ser encontrado com detalhes no diretório `./TF`.
 
 # Sistema de Irrigação IoT
 
