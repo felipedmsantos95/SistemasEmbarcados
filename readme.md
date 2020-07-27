@@ -78,7 +78,7 @@ O servidor foi feito em Node.js, uma plataforma construída sobre o motor Javasc
 
 Optou-se por utilizar um protocolo baseado em socket TCP, onde eram enviados pacotes com informações que os significados eram revertidos em comandos entre o cliente e servidor, a fim de deixar a comunicação mais enxuta e manter ela funcional por um longo período de tempo.
 
-A interface de usuário foi feita utilizando-se a combinação HTML, CSS e Javascript e- o resultado pode ser visto na imagem a seguir:
+A interface de usuário foi feita utilizando-se a combinação HTML, CSS e Javascript. O resultado pode ser visto na imagem a seguir:
 
 ![X33](images/X33.jpg)
 
