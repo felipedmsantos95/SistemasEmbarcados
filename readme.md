@@ -65,6 +65,8 @@ Foi montado um protótipo que consiste em dois recipientes plásticos, onde a bo
 
 <p align="center">
   <img src="https://github.com/felipedmsantos95/SistemasEmbarcados/blob/master/images/X28.jpg"/>
+</p>
+<p align="center">
   <img src="https://github.com/felipedmsantos95/SistemasEmbarcados/blob/master/images/X27.jpg"/>  
   <img src="https://github.com/felipedmsantos95/SistemasEmbarcados/blob/master/images/X30.jpg"/>
 </p>
