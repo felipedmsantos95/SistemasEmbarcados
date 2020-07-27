@@ -25,19 +25,25 @@ Sensor de Umidade do Solo Higrômetro foi feito para detectar as variações de-
 
 - **Módulo Relé 3.3V**
 
-![X17](images/X17.jpg)
+<p align="center">
+  <img src="https://github.com/felipedmsantos95/SistemasEmbarcados/blob/master/images/X17.jpg"/>
+</p>
 
 Um módulo para fazer acionamento de cargas de 200V AC, como lâmpadas,- equipamentos eletrônicos, motores, ou usá-lo para fazer um isolamento entre um circuito e outro. O módulo é equipado com transistores, conectores, leds, diodos e um relé. Possui um LED para indicar o estado da saída do relé. Foi utilizado para o acionamento da Bomba d’água.
 
 - **NodeMCU 0.1 LOLin**
 
-![X20](images/X20.jpg)
+<p align="center">
+  <img src="https://github.com/felipedmsantos95/SistemasEmbarcados/blob/master/images/X20.jpg"/>
+</p>
 
 Placa de desenvolvimento que combina o chip ESP8266, uma interface usb-serial e- um regulador de tensão 3.3V. A programação foi feita através da extensão Platformio no VisualStudio, utilizando a comunicação via cabo micro-usb. O NodeMCU possui antena embutida e conector micro-usb para conexão ao computador, além de 11 pinos de I/O e conversor analógico-digital.
 
 - **Shield Base para NodeMCU**
 
-![X21](images/X21.jpg)
+<p align="center">
+  <img src="https://github.com/felipedmsantos95/SistemasEmbarcados/blob/master/images/X21.jpg"/>
+</p>
 
 Placa de expansão para ampliar a placa Esp8266 ESP-12E Nodemcu. Possui- combinações de pinos de forma a proporcionar
 
@@ -45,7 +51,9 @@ facilidade nas ligações da placa- microcontroladora. Para maiores possibilidad
 
 -  **Bomba de aquário Atman AT-300**
 
-![X24](images/X24.jpg)
+<p align="center">
+  <img src="https://github.com/felipedmsantos95/SistemasEmbarcados/blob/master/images/X24.jpg"/>
+</p>
 
 Bomba submersa para aquários e fontes com grelha plástica, bico e ventosas, possui- saída de água de 8mm e vazão regulável até 180 l/h. Foi utilizada para irrigar o solo (algodão) do protótipo.
 
