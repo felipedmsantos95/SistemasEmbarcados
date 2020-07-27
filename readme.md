@@ -64,9 +64,9 @@ Bomba submersa para aquários e fontes com grelha plástica, bico e ventosas, po
 Foi montado um protótipo que consiste em dois recipientes plásticos, onde a bomba- ficava submersa no recipiente inferior com água e quando ligada, leva a água através de uma mangueira para o recipiente superior, que está revestido com algodão e simula o solo a ser monitorado pelo sensor como nas figuras que seguem. 
 
 <p align="center">
+  <img src="https://github.com/felipedmsantos95/SistemasEmbarcados/blob/master/images/X28.jpg"/>
   <img src="https://github.com/felipedmsantos95/SistemasEmbarcados/blob/master/images/X27.jpg"/>  
   <img src="https://github.com/felipedmsantos95/SistemasEmbarcados/blob/master/images/X30.jpg"/>
-  <img src="https://github.com/felipedmsantos95/SistemasEmbarcados/blob/master/images/X28.jpg"/>
 </p>
 
 
