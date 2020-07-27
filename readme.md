@@ -18,26 +18,26 @@ A proposta do trabalho final consiste no monitoramento de um solo via rede wifi,
 
 - Sensor de Umidade YF-69
 
-![X16](images/X16)
+![X16](images/X16.jpg)
 
 
 Sensor de Umidade do Solo Higrômetro foi feito para detectar as variações de- umidade no solo. Quando o solo está seco, a saída do sensor fica em estado alto e quando úmido, a saída do sensor fica em estado baixo. O limite entre seco e úmido pode ser ajustado através do potenciômetro presente no sensor que regulará a saída digital D0. Contudo, para que fosse obtida resolução melhor, foi utilizada a saída analógica A0 conectada ao conversor AD presente no NodeMCU utilizado neste projeto.
 
 - Módulo Relé 3.3V
 
-![X17](images/X17)
+![X17](images/X17.jpg)
 
 Um módulo para fazer acionamento de cargas de 200V AC, como lâmpadas,- equipamentos eletrônicos, motores, ou usá-lo para fazer um isolamento entre um circuito e outro. O módulo é equipado com transistores, conectores, leds, diodos e um relé. Possui um LED para indicar o estado da saída do relé. Foi utilizado para o acionamento da Bomba d’água.
 
 - NodeMCU 0.1 LOLin
 
-![X20](images/X20)
+![X20](images/X20.jpg)
 
 Placa de desenvolvimento que combina o chip ESP8266, uma interface usb-serial e- um regulador de tensão 3.3V. A programação foi feita através da extensão Platformio no VisualStudio, utilizando a comunicação via cabo micro-usb. O NodeMCU possui antena embutida e conector micro-usb para conexão ao computador, além de 11 pinos de I/O e conversor analógico-digital.
 
 - Shield Base para NodeMCU
 
-![X21](images/X21)
+![X21](images/X21.jpg)
 
 Placa de expansão para ampliar a placa Esp8266 ESP-12E Nodemcu. Possui- combinações de pinos de forma a proporcionar
 
@@ -45,7 +45,7 @@ facilidade nas ligações da placa- microcontroladora. Para maiores possibilidad
 
 -  Bomba de aquário Atman AT-300
 
-![X24](images/X24)
+![X24](images/X24.jpg)
 
 Bomba submersa para aquários e fontes com grelha plástica, bico e ventosas, possui- saída de água de 8mm e vazão regulável até 180 l/h. Foi utilizada para irrigar o solo (algodão) do protótipo.
 
@@ -54,11 +54,11 @@ Bomba submersa para aquários e fontes com grelha plástica, bico e ventosas, po
 
 Foi montado um protótipo que consiste em dois recipientes plásticos, onde a bomba- ficava submersa no recipiente inferior com água e quando ligada, leva a água através de uma mangueira para o recipiente superior, que está revestido com algodão e simula o solo a ser monitorado pelo sensor como nas figuras que seguem. 
 
-![X27](images/X27)
+![X27](images/X27.jpg)
 
-![X28](images/X28)
+![X28](images/X28.jpg)
 
-![X30](images/X30)
+![X30](images/X30.jpg)
 
 
 O sensor foi ligado ao pino analógico A0 do NodeMCU e o módulo relé responsável- pelo chaveamento da bomba foi ligado ao pino digital D7. A programação foi feita de forma que o monitoramento também possa ser feito quando o controlador está desconectado da rede WiFi, sendo o servidor responsável apenas pela exibição dos dados coletados em um gráfico, e pelo armazenamento do valor de umidade desejado pelo usuário em um banco de dados, o escolhido neste caso foi o MongoDB, quando o ESP é conectado pela rede WiFi. Quando ele está offline o setpoint permanece sendo o último que foi configurado até o seu desligamento.
@@ -69,7 +69,7 @@ Optou-se por utilizar um protocolo baseado em socket TCP, onde eram enviados pac
 
 A interface de usuário foi feita utilizando-se a combinação HTML, CSS e Javascript e- o resultado pode ser visto na imagem a seguir:
 
-![X33](images/X33)
+![X33](images/X33.jpg)
 
 Existe um indicativo do status atual da bomba, um label para mudar o valor do- setpoint além da exibição do gráfico de leituras de umidade em tempo real.
 
