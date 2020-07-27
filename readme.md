@@ -18,8 +18,9 @@ A proposta do trabalho final consiste no monitoramento de um solo via rede wifi,
 
 - **Sensor de Umidade YF-69**
 
-![X16](images/X16.jpg)
-
+<p align="center">
+  <img src="https://github.com/felipedmsantos95/SistemasEmbarcados/blob/master/images/X16.jpg"/>
+</p>
 
 Sensor de Umidade do Solo Higrômetro foi feito para detectar as variações de- umidade no solo. Quando o solo está seco, a saída do sensor fica em estado alto e quando úmido, a saída do sensor fica em estado baixo. O limite entre seco e úmido pode ser ajustado através do potenciômetro presente no sensor que regulará a saída digital D0. Contudo, para que fosse obtida resolução melhor, foi utilizada a saída analógica A0 conectada ao conversor AD presente no NodeMCU utilizado neste projeto.
 
