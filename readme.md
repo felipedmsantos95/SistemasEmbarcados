@@ -82,7 +82,7 @@ A interface de usuário foi feita utilizando-se a combinação HTML, CSS e Javas
 
 ![X33](images/X33.jpg)
 
-Existe um indicativo do status atual da bomba, um label para mudar o valor do- setpoint além da exibição do gráfico de leituras de umidade em tempo real.
+Existe um indicativo do status atual da bomba, um label para mudar o valor do setpoint além da exibição do gráfico de leituras de umidade em tempo real.
 
 
 
